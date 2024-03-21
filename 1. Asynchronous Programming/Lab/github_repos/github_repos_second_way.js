@@ -1,26 +1,31 @@
-function loadRepos() {
+function loadRepos() 
+{
     let input = document.getElementById('username');
     let ul = document.getElementById('repos');
     let username = input.value;
     let url = `https://api.github.com/users/${username}/repos`;
 
-    fetch(url)
-        .then(response => {
-            if (response.status != 200) {
-                throw new Error(`${response.status} ${response.statusText}`);
-            }
-            return response.json(); 
-        })
-        .then(data => {
-            data.forEach(element => {
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET",url,true);
+
+    xhr.onreadystatechange = function()
+    {
+        if(xhr.readyState == 4 && xhr.status == 200)
+        {
+            let data = JSON.parse(xhr.response);
+            data.forEach(element => 
+            {
                 let li = createLi(element.full_name, element.html_url);
                 ul.appendChild(li);
             });
-        })
-        .catch(e => {
-            let li = createLi(e.message);
-            ul.appendChild(li); 
-        });
+        }
+        else if(xhr.readyState == 4)
+        {
+            let li = createLi(`${xhr.status} ${xhr.statusText}`);
+            ul.appendChild(li);
+        }
+    }
+    xhr.send();
 }
 
 function createLi(name, url)
