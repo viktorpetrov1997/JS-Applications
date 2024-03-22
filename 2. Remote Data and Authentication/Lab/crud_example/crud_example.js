@@ -15,7 +15,8 @@ async function loadLandmarks()
     let url = 'http://localhost:3030/jsonstore/landmarks';
     let response = await fetch(url);
     let result = await response.json();
-    Object.values(result).forEach(e => {
+    Object.values(result).forEach(e => 
+    {
         let tr = createLandmark(e._id, e.name, e.area, e.yearDatedStart, e.yearDatedEnd);
         landmarksTableBody.appendChild(tr);
     })
@@ -41,12 +42,12 @@ function createLandmark(id, name, area, yearDatedStart, yearDatedEnd)
 
     let deleteBtn = document.createElement('button');
     deleteBtn.textContent = 'Delete';
-    deleteBtn.dataset.id = id;
+    deleteBtn.dataset.id = id; // We put this id here so we can identify which delete button is pressed
     deleteBtn.addEventListener('click',deleteHandler);
 
     let editBtn = document.createElement('button');
     editBtn.textContent = 'Edit';
-    editBtn.dataset.id = id;
+    editBtn.dataset.id = id; // We put this id here so we can identify which edit button is pressed
     editBtn.addEventListener('click',loadEditData);
 
     controlsTd.appendChild(deleteBtn);
@@ -61,13 +62,13 @@ function createLandmark(id, name, area, yearDatedStart, yearDatedEnd)
     return tr;
 }
 
-async function loadEditData()
+async function loadEditData(e)
 {
     let editBtn = e.target;
     let id = editBtn.dataset.id;
 
     let url = `http://localhost:3030/jsonstore/landmarks/${id}`;
-    let response = await fetch(url, settings);
+    let response = await fetch(url);
     let result = await response.json();
 
     let idInput = document.getElementById('edit-id');
@@ -100,7 +101,8 @@ async function editHandler(e)
     let yearDatedEnd = Number(yearDatedEndInput.value);
 
     let url = `http://localhost:3030/jsonstore/landmarks/${id}`;
-    let settings = {
+    let settings = 
+    {
         method: 'Put',
         headers: { 'Content-type': 'application/json'},
         body: JSON.stringify({_id: id,name, area, yearDatedStart, yearDatedEnd})
@@ -144,7 +146,8 @@ async function createHandler(e)
     let yearDatedEnd = Number(document.getElementById('create-year-dated-end').value);
 
     let url = 'http://localhost:3030/jsonstore/landmarks';
-    let settings = {
+    let settings = 
+    {
         method: 'post',
         headers: { 'Content-type': 'application/json'},
         body: JSON.stringify({name, area, yearDatedStart, yearDatedEnd})
