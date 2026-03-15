@@ -1,8 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-body {
+
+body 
+{
   font-family: "Open Sans", serif;
 }
-button {
+
+button 
+{
   background-color: #4caf50;
   color: white;
   padding: 14px 20px;
@@ -11,10 +15,12 @@ button {
   border-radius: 4px;
   cursor: pointer;
 }
-input[type=text] {
-   padding: 12px 20px;
-   margin: 8px 0;
-   display: inline-block;
-   border: 1px solid #ccc;
-   border-radius: 4px;
+
+input[type=text] 
+{
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
