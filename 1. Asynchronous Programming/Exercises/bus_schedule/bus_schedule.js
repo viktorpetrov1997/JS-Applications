@@ -12,7 +12,7 @@ async function depart()
     {
         let reponse = await fetch(`http://localhost:3030/jsonstore/bus/schedule/${nextStopId}`);
 
-        if (!reponse.ok) 
+        if(!reponse.ok) 
         {
             let error = new Error(reponse.statusText);
             throw error;
