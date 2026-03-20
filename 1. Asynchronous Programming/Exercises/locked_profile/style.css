@@ -1,40 +1,52 @@
 @import url("https://fonts.googleapis.com/css?family=Lato");
 @import url("https://fonts.googleapis.com/css?family=PT+Sans");
-* {
+
+* 
+{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html {
+
+html 
+{
   font-family: "PT sans", sans-serif;
   font-size: 24px;
   color: #234465;
 }
-body {
+
+body 
+{
   display: flex;
   flex-direction: column;
   margin: 0;
   min-height: 100vh;
   flex-wrap: wrap;
 }
-#main {
+
+#main 
+{
   background-size: cover;
   margin-top: 1%;
 }
 
-#exercise {
+#exercise 
+{
   width: 70%;
   float: left;
   padding: 1rem 0 1rem 1rem;
 }
-main:after {
+
+main:after 
+{
   display: block;
   content: "";
   clear: both;
 }
 
 input[type="button"],
-button {
+button 
+{
   padding: 0.3rem 0.5rem;
   font-size: 0.7em;
   margin: 1rem 0 1rem 0;
@@ -45,7 +57,8 @@ button {
   outline: none;
 }
 
-.profile {
+.profile 
+{
   border: 3px solid black;
   display: inline-block;
   margin-left: 11.7%;
@@ -54,7 +67,8 @@ button {
   margin-top: 15px;
 }
 
-#down {
+#down 
+{
   border: 3px solid black;
   display: inline-block;
   margin-left: 19.9%;
@@ -63,21 +77,26 @@ button {
   margin-top: 15px;
 }
 
-.userIcon {
+.userIcon 
+{
   width: 99%;
   height: auto;
   margin: 0 auto;
 }
 
-.hiddenInfo input{
+.hiddenInfo input 
+{
   display: inline-block;
   width: 100%;
 }
 
-.hiddenInfo input {
+.hiddenInfo input 
+{
   width: 100%;
 }
 
-.hiddenInfo > input, .hiddenInfo > label {
+.hiddenInfo>input,
+.hiddenInfo>label 
+{
   display: none;
 }
