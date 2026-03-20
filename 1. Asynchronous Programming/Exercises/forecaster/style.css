@@ -1,9 +1,11 @@
-#content {
+#content 
+{
     width: 75%;
     margin: 0 auto;
 }
 
-div.forecasts {
+div.forecasts 
+{
     display: inline-block;
     width: 30%;
     border: 1px solid aquamarine;
@@ -11,56 +13,67 @@ div.forecasts {
     margin: 2% 2% 0.5% 0.5%;
 }
 
-div.forecast-info {
+div.forecast-info 
+{
     border: 1px solid aquamarine;
     border-radius: 4px;
     margin-bottom: 1%;
 }
 
-#request {
+#request 
+{
     text-align: center;
 }
 
-.bl {
+.bl 
+{
     width: 300px;
 }
 
-#current {
+#current 
+{
     text-align: center;
     font-size: 2em;
 }
 
-#upcoming {
+#upcoming 
+{
     text-align: center;
 }
 
-.condition {
+.condition 
+{
     text-align: left;
     display: inline-block;
 }
 
-.symbol {
+.symbol
+{
     font-size: 4em;
     display: inline-block;
 }
 
-.forecast-data {
+.forecast-data 
+{
     display: block;
 }
 
-.upcoming {
+.upcoming 
+{
     display: inline-block;
     margin: 1.5em;
 }
 
-.label {
+.label 
+{
     margin-top: 1em;
     font-size: 1.5em;
     background-color: aquamarine;
     font-weight: 400;
 }
 
-input {
+input 
+{
     padding: 10px 12px;
     margin: 5px 0;
     display: inline-block;
@@ -68,6 +81,7 @@ input {
     border-radius: 4px;
 }
 
-input[type=button] {
+input[type=button] 
+{
     background-color: aquamarine;
 }
