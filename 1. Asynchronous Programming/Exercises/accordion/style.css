@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins");
 
-body {
+body 
+{
   font-family: "Poppins", sans-serif;
 }
 
-.accordion {
+.accordion 
+{
   border: 2px solid #cdc7c7;
   display: inline-block;
   width: 40%;
@@ -12,11 +14,13 @@ body {
   margin: 10px;
 }
 
-.accordion p {
+.accordion p 
+{
   margin: 1em;
 }
 
-.button {
+.button 
+{
   float: right;
   background: #393636;
   padding: 0.1em 1em 0.1em 1em;
@@ -27,11 +31,13 @@ body {
   letter-spacing: 3px;
 }
 
-.extra {
+.extra 
+{
   display: none;
 }
 
-.head {
+.head 
+{
   background: #ccccff;
   padding: 1em;
 }
