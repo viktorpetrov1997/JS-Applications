@@ -1,15 +1,21 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-body {
+
+body 
+{
     font-family: 'Open Sans', serif;
 }
-select {
+
+select 
+{
     padding: 10px 15px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-button {
+
+button 
+{
     background-color: #4CAF50;
     color: white;
     padding: 10px 15px;
