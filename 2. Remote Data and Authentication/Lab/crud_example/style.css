@@ -1,15 +1,17 @@
-
-th, td {
+th, td 
+{
     border: 1px solid black;
     padding: 10px;
     margin: 10px;
 }
 
-table {
+table 
+{
     margin: 10px;
 }
 
-form {
+form 
+{
     border: 1px solid black;
     padding: 10px;
     margin: 10px;
