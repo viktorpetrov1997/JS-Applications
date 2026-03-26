@@ -1,5 +1,7 @@
 import { dataService } from "./dataService.js";
 import { userUtils } from "./userUtils.js";
+import { showHome } from "./homeView.js";
+import { showEditView } from "./editMovieView.js";
 
 const section = document.querySelectorAll("section");
 const detailsView = document.getElementById("movie-example");
@@ -17,10 +19,24 @@ export async function showDetailsView(e)
 
     const likeCount = await dataService.getLikeCount(id);
 
-    showMovie(data, isOwner, likeCount);
+    const userId = userUtils.getId();
+
+    let hasLiked = false;
+
+    if(userId)
+    {
+        const liked = await dataService.getLikeForUser(id, userId);
+
+        if(liked.length > 0)
+        {
+            hasLiked = true;
+        }
+    }
+
+    showMovie(data, isOwner, likeCount, hasLiked);
 }
 
-function showMovie(data, isOwner, likeCount)
+function showMovie(data, isOwner, likeCount, hasLiked)
 {
     detailsView.innerHTML = `
     <div class="container">
@@ -37,15 +53,39 @@ function showMovie(data, isOwner, likeCount)
               </p>
                 ${isOwner ?
                     `
-                    <a class="btn btn-danger" href="#">Delete</a>
-                    <a class="btn btn-warning" href="#">Edit</a>
+                    <a class="btn btn-danger" data-action="delete" data-id=${data._id} href="#">Delete</a>
+                    <a class="btn btn-warning" data-action="edit" data-id=${data._id} href="#">Edit</a>
                     <span class="enrolled-span">Liked ${likeCount}</span>
                     ` : ""
                 }
-                ${!isOwner ? `<a class="btn btn-primary" href="#">Like</a>` : ""}
+                ${!isOwner && !hasLiked ? `<a class="btn btn-primary" data-action="like" data-id=${data._id} href="#">Like</a>` : ""}
+                ${!isOwner && hasLiked ? `<span class="enrolled-span">Liked ${likeCount}</span>` : ""}
             </div>
           </div>
         </div>
       </div>
     `
+
+    detailsView.querySelector("a[data-action='delete']")?.addEventListener("click", deleteMovie);
+    detailsView.querySelector("a[data-action='like']")?.addEventListener("click", onLike);
+    detailsView.querySelector("a[data-action='edit']")?.addEventListener("click", showEditView);
+}
+
+async function deleteMovie(e)
+{
+    e.preventDefault();
+    const id = e.target.dataset.id;
+    await dataService.del(id);
+    showHome();
+}
+
+async function onLike(e)
+{
+    e.preventDefault();
+    const id = e.target.dataset.id;
+    const userId = userUtils.getId();
+
+    await dataService.addLike({ movieId: id });
+
+    showDetailsView({ target: { dataset: { id } } }); 
 }

@@ -2,6 +2,7 @@ import { userUtils } from "./userUtils.js";
 import { dataService } from "./dataService.js";
 import { showCreateView } from "./createMovieView.js";
 import { showDetailsView } from "./detailsView.js";
+import { updateNav } from "./app.js";
 
 const section = document.querySelectorAll("section");
 const homeSection = document.getElementById("home-page");
@@ -22,6 +23,7 @@ export function showHome()
 
     movieContainer.style.display = "block";
     showAllMovies();
+    updateNav();
 }
 
 async function showAllMovies()

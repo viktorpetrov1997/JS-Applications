@@ -43,6 +43,16 @@ function getLikeCount(id)
     return api.get(BASE_URL + endPoints.likeCount(id));
 }
 
+function addLike(data)
+{
+    return api.post(BASE_URL + endPoints.addLike, data);
+}
+
+function getLikeForUser(movieId, userId)
+{
+    return api.get(BASE_URL + endPoints.getLikeForUser(movieId, userId));
+}
+
 export const dataService =
 {
     getAllMovies,
@@ -50,5 +60,7 @@ export const dataService =
     getLikeCount,
     addMovie,
     updateMovie,
-    del
+    del,
+    addLike,
+    getLikeForUser
 }
