@@ -1,5 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-input[type=text] {
+
+input[type=text] 
+{
 
   padding: 12px 20px;
   margin: 8px 0;
@@ -9,7 +11,8 @@ input[type=text] {
   box-sizing: border-box;
 }
 
-button {
+button 
+{
   background-color: #4CAF50;
   color: white;
   padding: 14px 20px;
@@ -19,10 +22,12 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+button:hover 
+{
   background-color: #45a049;
 }
 
-body{
-   font-family: 'Open Sans',serif;
+body 
+{
+  font-family: 'Open Sans', serif;
 }
