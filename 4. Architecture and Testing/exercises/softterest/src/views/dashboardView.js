@@ -15,7 +15,7 @@ export function showDashboardView(ctx)
 async function loadIdea()
 {
     const data = await dataService.getAll();
-    dashboardSection.innerHTML = "";
+    dashboardSection.innerHTML = data.length === 0 ? getNoDataText() : "";
     data.forEach(x => dashboardSection.innerHTML += createIdea(x));
     dashboardSection.querySelectorAll("a").forEach(x => x.addEventListener("click", onDetails));
 }
@@ -40,4 +40,11 @@ function onDetails(e)
     const id = e.target.dataset.id;
 
     context.goTo("/details", id);
+}
+
+function getNoDataText()
+{
+    return `
+        <h1>No ideas yet! Be the first one :)</h1>
+    `
 }

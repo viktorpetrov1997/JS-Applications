@@ -1,5 +1,3 @@
-import { baseUrl } from "./config.js";
-
 function register() 
 {   
     const buttonElem = document.querySelector("button");

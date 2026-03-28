@@ -51,7 +51,7 @@ function app()
         sessionStorage.removeItem("accessToken");
         sessionStorage.removeItem("loggedUser");
         sessionStorage.removeItem("id");
-        window.location = "index.html"
+        window.location = "index.html";
     }
     
     const catchesDivElem = document.getElementById("catches");

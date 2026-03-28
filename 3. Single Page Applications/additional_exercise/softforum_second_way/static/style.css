@@ -1,0 +1,299 @@
+@import url('typography.css');
+@import url('new-topic.css');
+@import url('topic-content.css');
+
+body {
+    max-width: 980px;
+    margin: auto;
+    position: relative;
+    min-height: 100vh;
+    background-color: #e4e3e3;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 4.5em;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+h2 {
+    text-align: center;
+    border-bottom: 1px dashed #999;
+}
+
+span {
+    font-weight: bold;
+}
+
+button {
+    background-color: #234465 ;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/* header  */
+
+header {
+    background:#234465 
+}
+
+header ul {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    margin: auto;
+}
+
+header ul span {
+    color: white;
+    padding: 0.5em;
+}
+
+.mini-navbar ul {
+    border: 1px solid #00d4ff;
+    border-radius: 0.3em;
+    padding-left: 0;
+    width: 100%;
+}
+
+header li {
+    list-style: none;
+  
+}
+
+header li:hover {
+    scale: 1.1;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    background-color: #ff9f00;
+    width: 15vw;
+    padding: 0 5em;
+    margin: .35em;
+    text-align: center;
+    border-radius: 20px;
+    text-shadow: 1px 1px rgb(87, 86, 86);
+}
+
+.logo {
+    font-size: 1.6em;
+    color: white;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+.logo-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+    }
+
+    .logo-wrap > img {
+        height: 13vh;
+        width: auto;
+        margin-right: 3vw;
+        border: none;
+    }
+
+    .mini-navbar-wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+    }
+
+/* mini-navbar */
+
+.mini-navbar ul {
+    background-color: #6ba1b8;
+    border-radius: 5px;
+}
+
+.mini-navbar ul {
+    margin-bottom: 60px;
+    margin-right: -50px;
+  }
+  .mini-navbar ul li {
+    background-color: #ff9f00;
+    width: 15vw;
+    text-align: center;
+    padding: 5px;
+    border-radius: 20px;
+    text-shadow: 1px 1px rgb(95, 94, 94);
+}
+.mini-navbar ul li:hover{
+    scale: 1.1;
+    
+}
+/* main  */
+
+main {
+    width: 75%;
+}
+
+/* topic list item */
+
+.topic-container a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.topic-container span {
+    font-weight: bold;
+}
+
+.topic-container h2, p {
+    padding: 0.3em 0 0.2em;
+    margin: 0;
+}
+.topic-container h2{
+    background:#234465; 
+    color: white;
+    border-radius: 10px;
+    margin-left: 15px;
+    text-shadow: 1px 1px black;
+}
+
+.topic-container h2:hover{
+background-color: #ff9f00;
+}
+
+.topic-name-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3em 0.5em;
+    border: 1px solid #000000;
+    border-radius: 0.3em;
+    font-size: 0.8em;
+    margin-top: 1em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.topic-title {
+    padding: 0;
+}
+
+.topic-name {
+    width: 100%;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.7rem;
+}
+
+.subscribers {
+    text-align: right;
+    flex-basis: 25%;
+}
+
+.subscribers button {
+    padding: 0.2rem 0.5rem;
+    border: none;
+    border-radius: 0.3rem;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+}
+
+.subscribe {
+    background-color: green;
+}
+
+.unsubscribe {
+    background-color: red;
+}
+
+time {
+    font-weight: bold;
+}
+
+/* aside  */
+
+aside {
+    width: 29%;
+    margin-top: 1em;
+    font-size: 0.8em;
+}
+
+.aside * {
+    margin: 0;
+    padding: 0;
+}
+
+.aside>div {
+    border: 1px solid #999;
+    border-radius: 0.3em;
+    padding: 0.3em 0.5em;
+}
+
+.title {
+    font-size: 1.5em;
+    border-bottom: none;
+}
+
+.aside .aside-topic {
+    margin: 1rem 0;
+    padding: 0.5rem 0;
+}
+
+.aside h3 {
+    border-bottom: none;
+    border-radius: 0.3rem;
+    font-size: 1.2rem;
+    background-color: #4ebced;
+    padding-left: 0.5rem;
+}
+
+.aside-topic+.aside-topic {
+    border-top: dashed 1px #999;
+}
+
+.aside-topic p {
+    text-align: right;
+}
+
+.aside-topic a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* footer  */
+
+footer {
+    background: rgb(0, 212, 255);
+    ;
+    margin-top: 1em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 1366px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color:#234465;
+    height: 8vh;
+    color: white;
+    text-shadow: 1px 1px black;
+    text-align: center;
+    }
+    
