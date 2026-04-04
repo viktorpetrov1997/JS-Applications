@@ -1,12 +1,13 @@
 import { html, renderer } from "../utility/library.js";
+import { createSubmitHandler } from "../utility/createSubmitHandler.js";
 
-const registerTemplate = () => html`
+const registerTemplate = (handler) => html`
     <section id="register">
     <article class="narrow">
         <header class="pad-med">
             <h1>Register</h1>
         </header>
-        <form id="register-form" class="main-form pad-large">
+        <form id="register-form" class="main-form pad-large" @submit=${handler}>
             <div class="error">Error message.</div>
             <label>E-mail: <input type="text" name="email"></label>
             <label>Username: <input type="text" name="username"></label>
@@ -22,5 +23,15 @@ const registerTemplate = () => html`
 
 export function showRegisterView(ctx)
 {
-    renderer(registerTemplate());
+    renderer(registerTemplate(createSubmitHandler(onSubmit)));
+}
+
+async function onSubmit(data)
+{
+    const { email, username, password, rePass } = data;
+
+    if(!email || password.length < 3 || password !== rePass || !username)
+    {
+        return renderer(registerTemplate(createSubmitHandler(onSubmit), { message: "All fields are required!" }));
+    }
 }
