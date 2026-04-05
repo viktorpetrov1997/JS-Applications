@@ -8,12 +8,14 @@ async function requester(method, url, data)
         headers: {}
     }
 
+    /*
     const accessToken = userUtils.getAccessToken();
     
     if(accessToken)
     {
         option.headers["X-Authorization"] = accessToken;
     }
+        */
 
     if(data)
     {
