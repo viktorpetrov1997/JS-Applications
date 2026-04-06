@@ -2,13 +2,13 @@ function storeUserData(userData)
 {
     const userId = userData._id;
     const accessToken = userData.accessToken;
-    sessionStorage.storeItem("userData", JSON.stringify({ userId, accessToken }));
+    sessionStorage.setItem("userData", JSON.stringify({ userId, accessToken }));
 }
 
 function getUserId()
 {
     const userData = sessionStorage.getItem("userData");
-    const userId = userData && JSON.parse(userData).id;
+    const userId = userData && JSON.parse(userData).userId;
     return userId;
 }
 

@@ -8,7 +8,10 @@ import { showRegisterView } from "./views/registerView.js";
 import { showCreateView } from "./views/createView.js";
 import { showEditView } from "./views/editView.js";
 import { showTeamDetailsView } from "./views/teamDetailsView.js";
+import { decorateContext } from "./utility/decorateContext.js";
+import { updateNav } from "./utility/navigationControl.js";
 
+page(decorateContext);
 page("/", showHomeView);
 page("/browseTeam", showBrowseTeamView);
 page("/login", showLoginView);
@@ -20,3 +23,4 @@ page("/edit/:id", showEditView);
 page("/details/:id", showTeamDetailsView);
 
 page.start();
+updateNav();

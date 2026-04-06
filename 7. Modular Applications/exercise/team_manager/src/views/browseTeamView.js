@@ -1,50 +1,53 @@
-import { html, renderer } from "../utility/library.js";
+import { html, nothing, renderer } from "../utility/library.js";
+import { userUtils } from "../utility/userUtil.js";
+import { dataService } from "../service/dataService.js";
 
-const browseTeamTemplate = () => html`
+const browseTeamTemplate = (hasUser, data) => html`
     <section id="browse">
 
     <article class="pad-med">
         <h1>Team Browser</h1>
     </article>
 
-    <article class="layout narrow">
-        <div class="pad-small"><a href="/create" class="action cta">Create Team</a></div>
-    </article>
+    ${hasUser ? html`
+        <article class="layout narrow">
+            <div class="pad-small"><a href="/create" class="action cta">Create Team</a></div>
+        </article>` : nothing   
+    }
 
-    <article class="layout">
-        <img src="./assets/atat.png" class="team-logo left-col">
-        <div class="tm-preview">
-            <h2>Storm Troopers</h2>
-            <p>These ARE the droids we're looking for</p>
-            <span class="details">5000 Members</span>
-            <div><a href="#" class="action">See details</a></div>
-        </div>
-    </article>
-
-    <article class="layout">
-        <img src="./assets/rocket.png" class="team-logo left-col">
-        <div class="tm-preview">
-            <h2>Team Rocket</h2>
-            <p>Gotta catch 'em all!</p>
-            <span class="details">3 Members</span>
-            <div><a href="#" class="action">See details</a></div>
-        </div>
-    </article>
-
-    <article class="layout">
-        <img src="./assets/hydrant.png" class="team-logo left-col">
-        <div class="tm-preview">
-            <h2>Minions</h2>
-            <p>Friendly neighbourhood jelly beans, helping evil-doers succeed.</p>
-            <span class="details">150 Members</span>
-            <div><a href="/details/id" class="action">See details</a></div>
-        </div>
-    </article>
+    ${data.map(team => teamTemplate(team))}
 
 </section>
 `;
 
-export function showBrowseTeamView(ctx)
+const teamTemplate = (team) => html`
+    <article class="layout">
+        <img src="${team.logoUrl}" class="team-logo left-col">
+        <div class="tm-preview">
+            <h2>${team.name}</h2>
+            <p>${team.description}</p>
+            <span class="details">${team.memberCount} Members</span>
+            <div><a href="/details/${team._id}" class="action">See details</a></div>
+        </div>
+    </article>
+`;
+
+export async function showBrowseTeamView(ctx)
 {
-    renderer(browseTeamTemplate());
+    const hasUser = !!userUtils.getUserId();
+    const data = await dataService.getAllTeams();
+
+    const allMembers = await dataService.getAllMembers();
+    data.forEach(team =>
+    {
+        const memberCount = getMemberCountByTeam(allMembers, team._id);
+        team.memberCount = memberCount;
+    }) 
+    
+    renderer(browseTeamTemplate(hasUser, data));
+}
+
+function getMemberCountByTeam(memberList, teamId)
+{
+    return memberList.filter(member => member.teamId === teamId && member.status === "member").length;
 }

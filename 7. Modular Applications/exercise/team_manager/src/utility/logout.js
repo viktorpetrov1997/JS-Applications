@@ -1,5 +1,8 @@
+import { userService } from "../service/userService.js";
 
-export function logout(ctx)
+export async function logout(ctx)
 {
-    console.log("logout");
+    await userService.logout();
+    ctx.updateNav();
+    ctx.goTo("/");
 }
