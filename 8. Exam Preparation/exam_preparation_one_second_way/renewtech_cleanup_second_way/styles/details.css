@@ -1,0 +1,92 @@
+#details-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(96, 87, 48);
+  clip-path: polygon(8% 0, 92% 0, 100% 12%, 100% 88%, 92% 100%, 9% 100%, 0 86%, 0 14%);
+  margin: 50px auto;
+  height: 75%;
+  width: 80%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ border-radius: 10px;
+ box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+#details{
+  margin-top: -110px;
+  scale: 0.9;
+}
+
+#details-wrapper img {
+  display: block;
+  margin:  auto;
+  height: 25vh;
+  width: 50vh;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+#details-img{
+  padding-top: 30px;
+}
+#details-category {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#details-description {
+  width: 95%;
+  margin: 30px auto;
+  height: auto;
+  text-align: center;
+}
+#details-category {
+  font-size: 22px;
+}
+
+h4 {
+  text-align: center;
+  color: rgb(255, 215, 0);
+  text-shadow: 1px 1px rgb(0, 0, 0);
+}
+
+ p {
+  text-align: center;
+  font-size: 18px;
+  color: rgb(255, 215, 0);
+  text-shadow: 1px 1px rgb(0, 0, 0);
+}
+
+span {
+  font-size: 22px;
+  color: rgb(255, 215, 0);
+  text-shadow: 1px 1px rgb(0, 0, 0);
+}
+
+#action-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+  
+  
+}
+
+#action-buttons a {
+  text-decoration: none;
+  margin: auto 50px;
+  margin-bottom: 10px;
+  font-size: 21px;
+  width: 130px;
+  text-align: center;
+  color: rgb(255, 215, 0);
+  background: rgb(29, 28, 28);
+  border-radius: 5px;
+}
+#action-buttons a:hover {
+  background: #bd2c2c;
+}
+
+#details h3{
+  text-align: center;
+  letter-spacing: 6px;
+  color: rgb(255, 215, 0);
+  text-shadow: 1px 1px rgb(0, 0, 0);
+  }

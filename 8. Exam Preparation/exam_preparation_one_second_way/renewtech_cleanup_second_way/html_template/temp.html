@@ -1,0 +1,152 @@
+<!-- Home page -->
+
+<section id="home">
+    <h1>
+        Dive into our world of cutting-edge technologies and out-of-the-box
+        ideas designed to make Mother Nature smile again. From quirky
+        gadgets to serious solutions, we're here to show you that saving the
+        planet can be as exciting as it is essential. Join us in our mission
+        to turn "green" into more than just a color - it's a lifestyle!
+    </h1>
+    <img id="home-img" src="./images/logo.png" alt="home-img" />
+</section>
+
+<!-- Dashboard page -->
+<h2>Solutions</h2>
+<section id="solutions">
+    <!-- Display a div with information about every post (if any)-->
+    <div class="solution">
+        <img src="./images/Bioremediation.png" alt="example1" />
+        <div class="solution-info">
+            <h3 class="type">Bioremediation</h3>
+            <p class="description">
+                Synthetic biology involves the design and construction of
+                biological systems for useful purposes.
+            </p>
+            <a class="details-btn" href="#">Learn More</a>
+        </div>
+    </div>
+    <div class="solution">
+        <img src="./images/Nanotechnology.png" alt="example2" />
+        <div class="solution-info">
+            <h3 class="type">Nanotechnology</h3>
+            <p class="description">
+                Nanotechnology offers solutions for environmental cleanup due to
+                its ability to manipulate materials at the nanoscale
+            </p>
+            <a class="details-btn" href="">Learn More</a>
+        </div>
+    </div>
+    <div class="solution">
+        <img src="./images/Phytoremediation.png" alt="example3" />
+        <div class="solution-info">
+            <h3 class="type">Phytoremediation</h3>
+            <p class="description">
+                Phytoremediation is a green technology that utilizes plants to
+                remove contaminants from soil, water, and air.
+            </p>
+            <a class="details-btn" href="#">Learn More</a>
+        </div>
+    </div>
+</section>
+<!-- Display an h2 if there are no posts -->
+<h2 id="no-solution">No Solutions Added.</h2>
+
+<!-- Register Page (Only for Guest users) -->
+<section id="register">
+    <div class="form">
+        <img class="border" src="./images/border.png" alt="" />
+        <h2>Register</h2>
+        <form class="register-form">
+            <input type="text" name="email" id="register-email" placeholder="email" />
+            <input type="password" name="password" id="register-password" placeholder="password" />
+            <input type="password" name="re-password" id="repeat-password" placeholder="repeat password" />
+            <button type="submit">register</button>
+            <p class="message">Already registered? <a href="#">Login</a></p>
+        </form>
+    </div>
+</section>
+
+<!-- Login Page (Only for Guest users) -->
+<section id="login">
+    <div class="form">
+        <img class="border" src="./images/border.png" alt="" />
+        <h2>Login</h2>
+        <form class="login-form">
+            <input type="text" name="email" id="email" placeholder="email" />
+            <input type="password" name="password" id="password" placeholder="password" />
+            <button type="submit">login</button>
+            <p class="message">
+                Not registered? <a href="#">Create an account</a>
+            </p>
+        </form>
+    </div>
+</section>
+
+<!-- Create Page (Only for logged-in users) -->
+<section id="create">
+    <div class="form">
+        <img class="border" src="./images/border.png" alt="" />
+        <h2>Add Solution</h2>
+        <form class="create-form">
+            <input type="text" name="type" id="type" placeholder="Solution Type" />
+            <input type="text" name="image-url" id="image-url" placeholder="Image URL" />
+            <textarea id="description" name="description" placeholder="Description" rows="2" cols="10"></textarea>
+            <textarea id="more-info" name="more-info" placeholder="more Info" rows="2" cols="10"></textarea>
+            <button type="submit">Add Solution</button>
+        </form>
+    </div>
+</section>
+<!-- Edit Page (Only for logged-in users) -->
+<section id="edit">
+    <div class="form">
+        <img class="border" src="./images/border.png" alt="" />
+        <h2>Edit Solution</h2>
+        <form class="edit-form">
+            <input type="text" name="type" id="type" placeholder="Solution Type" />
+            <input type="text" name="image-url" id="image-url" placeholder="Image URL" />
+            <textarea id="description" name="description" placeholder="Description" rows="2" cols="10"></textarea>
+            <textarea id="more-info" name="more-info" placeholder="more Info" rows="2" cols="10"></textarea>
+            <button type="submit">Edit</button>
+        </form>
+    </div>
+</section>
+
+<!-- Details page -->
+<section id="details">
+    <div id="details-wrapper">
+        <img id="details-img" src="./images/Bioremediation.png" alt="example1" />
+        <div>
+            <p id="details-type">Bioremediation</p>
+            <div id="info-wrapper">
+                <div id="details-description">
+                    <p id="description">
+                        Synthetic biology involves the design and construction of
+                        biological systems for useful purposes.
+                    </p>
+                    <p id="more-info">
+                        In the realm of environmental cleanup, synthetic biology can
+                        be employed to engineer microorganisms capable of degrading
+                        toxic pollutants. By introducing synthetic genes into
+                        bacteria or fungi, researchers can enhance their ability to
+                        break down pollutants such as hydrocarbons, pesticides, and
+                        industrial chemicals. These engineered microorganisms can be
+                        deployed in contaminated sites to accelerate the natural
+                        biodegradation process, offering a cost-effective and
+                        sustainable solution to environmental pollution.
+                    </p>
+                </div>
+            </div>
+            <h3>Like Solution:<span id="like">0</span></h3>
+
+            <!--Edit and Delete are only for creator-->
+            <div id="action-buttons">
+                <a href="#" id="edit-btn">Edit</a>
+                <a href="#" id="delete-btn">Delete</a>
+
+                <!--Bonus - Only for logged-in users ( not authors )-->
+                <a href="#" id="like-btn">Like</a>
+            </div>
+        </div>
+    </div>
+</section>
