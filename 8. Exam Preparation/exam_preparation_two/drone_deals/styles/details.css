@@ -1,0 +1,83 @@
+#details-wrapper {
+  background-color: rgb(192, 192, 192);
+  margin: auto;
+  height: 70vh;
+  width: 70vw;
+ background-image: url(../images/pattern.png);
+  border-radius: 20px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+#details-wrapper img {
+  display: block;
+  height:auto;
+  width: 45vh;
+  border-radius: 3px;
+  border: 2px solid rgb(0, 0, 0) ;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+#details-model {
+  text-align: center;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-color: black;
+  border-radius: 10px;
+  letter-spacing: 2px;
+}
+#details-description {
+  width: 95%;
+  margin: 30px auto;
+  height: 60%;
+  text-align: center;
+  background-color: black;
+  padding: 5px;
+  border-radius: 10px;
+}
+#details-model {
+  font-size: 22px;
+}
+
+
+
+p {
+  text-align: center;
+  font-size: 22px;
+  color: #ffffff;
+letter-spacing: 1px;
+}
+
+span {
+  font-size: 22px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: -25px;
+  
+}
+
+.buttons a {
+  text-decoration: none;
+  margin: auto 50px;
+  margin-bottom: 10px;
+  font-size: 26px;
+  width: 130px;
+  text-align: center;
+  color: white;
+  background: rgb(16, 174, 214);
+  border-radius: 5px;
+}
+.buttons a:hover {
+  background: #2d48a0;
+  color: rgb(255, 255, 255);
+}
+
+.phone-number{
+  color: rgb(216, 219, 44);
+}

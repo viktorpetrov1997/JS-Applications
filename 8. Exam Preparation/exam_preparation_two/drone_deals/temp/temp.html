@@ -1,0 +1,135 @@
+<section id="hero">
+    <p>
+        Discover the best deals on drones! Buy, sell, and trade top-quality drones with ease on Drone Deals - your
+        trusted marketplace for all things drone.</p>
+</section>
+
+<!-- Dashboard page -->
+<h3 class="heading">Marketplace</h3>
+<section id="dashboard">
+    <!-- Display a div with information about every post (if any)-->
+    <div class="drone">
+        <img src="./images/avata2.jpg" alt="example1" />
+        <h3 class="model">DJI Avata</h3>
+        <div class="drone-info">
+            <p class="price">Price: €450</p>
+            <p class="condition">Condition: New</p>
+            <p class="weight">Weight: 410g</p>
+        </div>
+        <a class="details-btn" href="#">Details</a>
+    </div>
+    <div class="drone">
+        <img src="./images/inspire3.jpg" alt="example1" />
+        <h3 class="model">DJI Inspire 3</h3>
+        <div class="drone-info">
+            <p class="price">Price: €9999</p>
+            <p class="condition">Condition: Used</p>
+            <p class="weight">Weight: 3995g</p>
+        </div>
+        <a class="details-btn" href="#">Details</a>
+    </div>
+    <div class="drone">
+        <img src="./images/mini3.png" alt="example1" />
+        <h3 class="model">DJI Mini 3 Pro</h3>
+        <div class="drone-info">
+            <p class="price">Price: €520</p>
+            <p class="condition">Condition: New</p>
+            <p class="weight">Weight: 249g</p>
+        </div>
+        <a class="details-btn" href="#">Details</a>
+    </div>
+</section>
+<!-- Display an h2 if there are no posts -->
+<h3 class="no-drones">No Drones Available</h3>
+
+<!-- Register Page (Only for Guest users) -->
+<section id="register">
+    <div class="form">
+        <h2>Register</h2>
+        <form class="register-form">
+            <input type="text" name="email" id="register-email" placeholder="email" />
+            <input type="password" name="password" id="register-password" placeholder="password" />
+            <input type="password" name="re-password" id="repeat-password" placeholder="repeat password" />
+            <button type="submit">register</button>
+            <p class="message">Already registered? <a href="#">Login</a></p>
+        </form>
+    </div>
+</section>
+
+<!-- Login Page (Only for Guest users) -->
+<section id="login">
+    <div class="form">
+        <h2>Login</h2>
+        <form class="login-form">
+            <input type="text" name="email" id="email" placeholder="email" />
+            <input type="password" name="password" id="password" placeholder="password" />
+            <button type="submit">login</button>
+            <p class="message">
+                Not registered? <a href="#">Create an account</a>
+            </p>
+        </form>
+    </div>
+</section>
+
+<!-- Create Page (Only for logged-in users) -->
+<section id="create">
+    <div class="form form-item">
+        <h2>Add Drone Offer</h2>
+        <form class="create-form">
+            <input type="text" name="model" id="model" placeholder="Drone Model" />
+            <input type="text" name="imageUrl" id="imageUrl" placeholder="Image URL" />
+            <input type="number" name="price" id="price" placeholder="Price" />
+            <input type="number" name="weight" id="weight" placeholder="Weight" />
+            <input type="number" name="phone" id="phone" placeholder="Phone Number for Contact" />
+            <input type="text" name="condition" id="condition" placeholder="Condition" />
+            <textarea name="description" id="description" placeholder="Description"></textarea>
+            <button type="submit">Add</button>
+        </form>
+
+    </div>
+</section>
+<!-- Edit Page (Only for logged-in users) -->
+<section id="edit">
+    <div class="form form-item">
+        <h2>Edit Offer</h2>
+        <form class="edit-form">
+            <input type="text" name="model" id="model" placeholder="Drone Model" />
+            <input type="text" name="imageUrl" id="imageUrl" placeholder="Image URL" />
+            <input type="number" name="price" id="price" placeholder="Price" />
+            <input type="number" name="weight" id="weight" placeholder="Weight" />
+            <input type="number" name="phone" id="phone" placeholder="Phone Number for Contact" />
+            <input type="text" name="condition" id="condition" placeholder="Condition" />
+            <textarea name="description" id="description" placeholder="Description"></textarea>
+            <button type="submit">Edit</button>
+        </form>
+    </div>
+</section>
+<!-- Details page -->
+
+<section id="details">
+    <div id="details-wrapper">
+        <div>
+            <img id="details-img" src="./images/avata2.jpg" alt="example1" />
+            <p id="details-model">DJI Avata</p>
+        </div>
+        <div id="info-wrapper">
+            <div id="details-description">
+                <p class="details-price">Price: €450</p>
+                <p class="details-condition">Condition: New</p>
+                <p class="details-weight">Weight: 410g</p>
+                <p class="drone-description">
+                    The DJI Avata is an innovative FPV (First-Person View) drone designed for immersive flying
+                    experiences. With a compact and robust design, it features a 4K camera capable of capturing
+                    stunning aerial footage at 60 fps. Equipped with advanced stabilization technology,
+                    the Avata ensures smooth video even in dynamic environments.
+                </p>
+                <p class="phone-number">Phone: 0987654321</p>
+            </div>
+            <!--Edit and Delete are only for creator-->
+            <div class="buttons">
+                <a href="" id="edit-btn">Edit</a>
+                <a href="" id="delete-btn">Delete</a>
+            </div>
+        </div>
+    </div>
+</section>

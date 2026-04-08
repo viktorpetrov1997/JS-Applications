@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap');
+
+#dashboard {
+  display: flex;
+  align-items: center;
+  justify-content:center ;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: -90px;
+}
+
+
+
+ h2 {
+  text-align: center;
+  font-size: 50px;
+  color: rgb(240, 0, 0);
+border-radius: 12px;
+margin-top: -10px;
+
+}
+
+.drone {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  width: 70vw;
+  height: 19.8vh;
+  padding-bottom: 1rem;
+  margin: 10px auto;
+  padding: 10px;
+background-image: url(../images/pattern.png);
+ border: 4px solid black;
+ border-top-left-radius: 50px;
+}
+
+.no-drones{
+  color: rgb(255, 255, 255);
+  width: 40vw;
+text-align: center;
+font-size: 42px;
+letter-spacing: 8px;
+background-color: rgba(5, 5, 5, 0.866);
+border-top-left-radius: 50px;
+margin-bottom: 100px;
+padding: 10px;
+}
+
+.drone img {
+  width: auto;
+  height:8.7vw; 
+  border-radius: 3px;
+  border: 2px solid rgb(0, 0, 0) ;
+  margin-top: 10px;
+
+}
+
+.drone .model {
+font-size: 30px;
+border: 5px solid black;
+padding: 10px;
+  color: rgb(29, 12, 92);
+background-color: whitesmoke;
+width: 10vw;
+text-align: center;
+}
+
+.details-btn {
+  margin-top: 4px;
+  text-decoration: none;
+  font-size: 28px;
+  width: 160px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  background:  rgb(5, 171, 232);
+  padding: 10px 0px;
+}
+.details-btn:hover {
+  background: #2d48a0;
+  color: rgb(255, 255, 255);
+
+}
+.drone-info {
+  padding: 0px 40px;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  line-height: 9px;
+  background-color: whitesmoke;
+  border: 5px solid black;
+  width: 25vw;
+}
+.drone-info p {
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+}
+
+.heading {
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px rgb(0, 0, 0);
+  width: 30vw;
+text-align: center;
+font-size: 28px;
+background-color: rgba(73, 70, 70, 0.866);
+border-radius: 20px;
+margin-left: 33vw;
+margin-bottom:90px;
+margin-top: -40px;
+}
+
