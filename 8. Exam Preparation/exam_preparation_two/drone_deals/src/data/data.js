@@ -3,8 +3,9 @@ import { get, post, put, del } from "./request.js";
 const endpoints =
 {
     all: "/data/drones?sortBy=_createdOn%20desc",
-    byId: "/data/collection/",
-
+    byId: "/data/drones/",
+    create: "/data/drones",
+    edit: "/data/drones/"
 }
 
 async function getAll()
@@ -17,14 +18,14 @@ async function getById(id)
     return get(endpoints.byId + id);
 }
 
-async function create(prop1, prop2)
+async function create(data)
 {
-    return post(endpoints.all, { prop1, prop2 });
+    return post(endpoints.create, data);
 }
 
 async function update(id, record)
 {
-    return put(endpoints.byId + id, record);
+    return put(endpoints.edit + id, record);
 }
 
 async function deleteById(id)

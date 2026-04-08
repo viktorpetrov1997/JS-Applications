@@ -1,6 +1,7 @@
 import { html, page } from "../lib.js";
 import { userService } from "../data/user.js";
 import { updateNav } from "../utils/navigation.js";
+import { showNotification } from "../utils/notification.js";
 
 const loginTemplate = () => html`
     <section id="login">
@@ -33,7 +34,7 @@ async function onSubmit(e)
 
     if(!email || !password)
     {
-        return alert("error");
+        return showNotification("All fields are required");
     }
 
     await userService.login(email, password);

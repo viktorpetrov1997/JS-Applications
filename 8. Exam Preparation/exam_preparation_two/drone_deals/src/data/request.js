@@ -1,4 +1,5 @@
 import { getUserData,clearUserData } from "../utils/utils.js";
+import { showNotification } from "../utils/notification.js";
 
 const hostname = "http://localhost:3030";
 
@@ -23,28 +24,33 @@ async function request(method, url, data)
         options.headers["X-Authorization"] = userData.accessToken;
     }
 
-    const res = await fetch(hostname + url, options);
-
-    if(!res.ok)
+    try
     {
-        const error = await res.json();
+        const res = await fetch(hostname + url, options);
 
-        console.log(error.message);
-
-        if(error.message == "Invalid access token")
+        if(!res.ok) 
         {
-            clearUserData();
+            const error = await res.json();
+
+            if(error.message == "Invalid access token") 
+            {
+                clearUserData();
+            }
+
+            throw new Error(error.message);
         }
 
-        throw error;
-    }
+        if(res.status == 204) 
+        {
+            return res;
+        }
 
-    if(res.status == 204)
+        return res.json();
+    }
+    catch(error)
     {
-        return res;
+        showNotification(error);
     }
-
-    return res.json();
 }
 
 export const get = (url) => request("get", url);

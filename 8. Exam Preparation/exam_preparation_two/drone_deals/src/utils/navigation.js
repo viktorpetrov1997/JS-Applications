@@ -10,7 +10,7 @@ const navigationTemplate = (hasUser) => html`
 
     ${hasUser ? html` 
     <div class="user">
-        <a href="/sell">Sell</a>
+        <a href="/create">Sell</a>
         <a href="/logout">Logout</a>
     </div> `
     :

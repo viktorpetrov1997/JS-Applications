@@ -1,6 +1,7 @@
 import { html, page } from "../lib.js";
 import { userService } from "../data/user.js";
 import { updateNav } from "../utils/navigation.js";
+import { showNotification } from "../utils/notification.js";
 
 const registerTemplate = () => html`
     <section id="register">
@@ -30,9 +31,14 @@ async function onSubmit(e)
 
     const { email, password, ["re-password"] : rePassword } = Object.fromEntries(formData);
 
-    if(!email || !password || password !== rePassword)
+    if(!email || !password)
     {
-        return alert("error");
+        return showNotification("All fields are required");
+    }
+
+    if(password !== rePassword)
+    {
+        return showNotification("Passwords don't match");
     }
 
     await userService.register(email, password);

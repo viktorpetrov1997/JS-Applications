@@ -4,7 +4,7 @@ import { dataService } from "../data/data.js";
 const dashboardTemplate = (data) => html`
     <h3 class="heading">Marketplace</h3>
     <section id="dashboard">
-        ${!!data ? html`
+        ${data.length > 0 ? html`
                 ${data.map(drone => droneTemplate(drone))}
                 `
             :
