@@ -23,3 +23,5 @@ In the "JS Applications" course, students will learn what HTTP requests are and 
 * Working with non-relational databases
 * Working with REST APIs and asynchronous programming
 * Testing the application
+## Certificate :heavy_check_mark:
+<img width="780" height="2254" alt="JS Applications - Certificate" src="https://github.com/user-attachments/assets/13ba3f4d-b99e-4296-8dce-1beed261bd55" />
