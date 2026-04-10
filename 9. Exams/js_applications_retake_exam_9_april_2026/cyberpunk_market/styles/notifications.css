@@ -1,0 +1,27 @@
+#notifications {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-top: 1em;
+    clip-path: polygon(7% 0, 100% 0, 100% 20%, 100% 59%, 93% 100%, 20% 100%, 0 100%, 0 43%);
+}
+
+
+.notification {
+    font-size: 1.5em;
+    color: #ffffff;
+    display: none;
+    text-align: right;
+}
+
+.notification>span {
+    display: inline-block;
+    padding:  0.5em 2em 0.5em 2em;
+    border-radius: 2px;
+}
+
+#errorBox>span {
+    background: rgb(199, 9, 216);
+}

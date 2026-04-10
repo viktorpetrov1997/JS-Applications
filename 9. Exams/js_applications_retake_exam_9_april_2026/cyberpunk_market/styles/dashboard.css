@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+#dashboard {
+  display: flex;
+  align-items: center;
+  justify-content:center ;
+  flex-wrap: wrap;
+  margin-top: -60px;
+}
+
+
+
+ h2 {
+  text-align: center;
+  font-size: 50px;
+  color: rgb(240, 0, 0);
+border-radius: 12px;
+margin-top: -10px;
+
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 28vw;
+  height: 63vh;
+  padding-bottom: 1rem;
+  margin: 20px auto;
+  padding: 10px;
+  background: rgb(3,3,3);
+  background: radial-gradient(circle, rgba(3,3,3,0.15449929971988796) 24%, rgba(0,0,0,1) 87%);
+  clip-path: polygon(20% 0%, 100% 0, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0 100%, 0% 20%);
+
+}
+
+.empty{
+  color: rgb(255, 255, 255);
+  width: 40vw;
+text-align: center;
+font-size: 42px;
+letter-spacing: 8px;
+background-color: rgba(5, 5, 5, 0.866);
+clip-path: polygon(7% 0, 100% 0, 100% 20%, 100% 59%, 93% 100%, 20% 100%, 0 100%, 0 43%);
+margin-bottom: 100px;
+padding: 10px;
+}
+
+.item img {
+  width: 16vw;
+  height:14vw; 
+  border-radius: 3px;
+  border: 2px solid rgb(238, 0, 143) ;
+  margin-top: 10px;
+
+}
+
+.item .title {
+  margin: 0;
+  letter-spacing: 2px;
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+}
+
+.details-btn {
+  margin-top: 4px;
+  text-decoration: none;
+  font-size: 21px;
+  width: 160px;
+  border-radius: 3px;
+  text-align: center;
+  color: white;
+  background:  rgb(5, 171, 232);
+}
+.details-btn:hover {
+  background: #e8e0e0;
+  color: black;
+  border: 1px solid black;
+  text-shadow: 1px 1px rgb(238, 0, 143);
+}
+.item-info {
+  padding: 0px 40px;
+  border-radius: 5px;
+  color: white;
+  line-height: 9px;
+}
+.item-info p {
+  color: white;
+  font-size: 16px;
+  text-shadow: 1px 1px black;
+}
+
+.heading {
+  color: rgb(5, 171, 232);
+  text-shadow: 3px 3px rgb(238, 0, 143);
+  width: 30vw;
+text-align: center;
+font-size: 42px;
+letter-spacing: 8px;
+background-color: rgba(255, 255, 255, 0.866);
+clip-path: polygon(7% 0, 100% 0, 100% 20%, 100% 59%, 93% 100%, 20% 100%, 0 100%, 0 43%);
+margin-left: 33vw;
+margin-bottom: 50px;
+margin-top: 0;
+}
+
+.model{
+  color: white;
+  text-shadow: 1px 1px rgb(238, 0, 143);
+  letter-spacing: 4px;
+}

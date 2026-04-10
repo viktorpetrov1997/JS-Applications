@@ -1,0 +1,76 @@
+#details-wrapper {
+  background-color: rgb(192, 192, 192);
+  margin: auto;
+  height: 70vh;
+  width: 70vw;
+  background: rgb(3,3,3);
+  background: radial-gradient(circle, rgba(3,3,3,0.15449929971988796) 24%, rgba(0,0,0,1) 87%);
+  clip-path: polygon(15% 0%, 100% 0, 100% 20%, 100% 80%, 85% 100%, 20% 100%, 0 100%, 0% 20%);
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+#details-wrapper img {
+  display: block;
+  height: 35vh;
+  width: 40vh;
+  border-radius: 3px;
+  border: 2px solid rgb(238, 0, 143) ;
+}
+
+#details-title {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px rgb(238, 0, 143);
+  letter-spacing: 5px;
+}
+#details-description {
+  width: 95%;
+  margin: 30px auto;
+  height: auto;
+  text-align: center;
+}
+#details-title {
+  font-size: 22px;
+}
+
+
+
+p {
+  text-align: center;
+  font-size: 22px;
+  color: #ffffff;
+text-shadow: 1px 1px black;
+letter-spacing: 1px;
+}
+
+span {
+  font-size: 22px;
+}
+
+#action-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+  
+}
+
+#action-buttons a {
+  text-decoration: none;
+  margin: auto 50px;
+  margin-bottom: 10px;
+  font-size: 26px;
+  width: 130px;
+  text-align: center;
+  color: white;
+  background: rgb(16, 174, 214);
+  border-radius: 5px;
+}
+#action-buttons a:hover {
+  background: #ffffff;
+  color: black;
+}
