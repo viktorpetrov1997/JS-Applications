@@ -5,19 +5,19 @@ import { dataService } from "../service/dataService.js";
 const browseTeamTemplate = (hasUser, data) => html`
     <section id="browse">
 
-    <article class="pad-med">
-        <h1>Team Browser</h1>
-    </article>
+        <article class="pad-med">
+            <h1>Team Browser</h1>
+        </article>
 
-    ${hasUser ? html`
-        <article class="layout narrow">
-            <div class="pad-small"><a href="/create" class="action cta">Create Team</a></div>
-        </article>` : nothing   
-    }
+        ${hasUser ? html`
+            <article class="layout narrow">
+                <div class="pad-small"><a href="/create" class="action cta">Create Team</a></div>
+            </article>` : nothing   
+        }
 
-    ${data.map(team => teamTemplate(team))}
+        ${data.map(team => teamTemplate(team))}
 
-</section>
+    </section>
 `;
 
 const teamTemplate = (team) => html`
@@ -38,6 +38,7 @@ export async function showBrowseTeamView(ctx)
     const data = await dataService.getAllTeams();
 
     const allMembers = await dataService.getAllMembers();
+
     data.forEach(team =>
     {
         const memberCount = getMemberCountByTeam(allMembers, team._id);

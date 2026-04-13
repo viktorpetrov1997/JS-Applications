@@ -5,7 +5,10 @@ const endPoints =
     getAllTeams: "http://localhost:3030/data/teams",
     getAllMembers: "http://localhost:3030/data/members?where=status%3D%22member%22",
     getTeamById: "http://localhost:3030/data/teams/",
-    getMembersForTeam: (teamId) => `http://localhost:3030/data/members?where=teamId%3D%22${teamId}%22&load=user%3D_ownerId%3Ausers`
+    getTeamMembers: (teamId) => `http://localhost:3030/data/members?where=teamId%3D%22${teamId}%22&load=user%3D_ownerId%3Ausers`,
+    requestToBecomeAMember: "http://localhost:3030/data/members",
+    approveMembership: "http://localhost:3030/data/members/",
+    removeFromOrLeaveTeam: "http://localhost:3030/data/members/"
 }
 
 async function getAllTeams()
@@ -25,7 +28,22 @@ async function getTeamById(id)
 
 async function getTeamMembers(teamId)
 {
-    return await api.get(endPoints.getMembersForTeam(teamId));
+    return await api.get(endPoints.getTeamMembers(teamId));
+}
+
+async function requestToBecomeAMember(data)
+{
+    return await api.post(endPoints.requestToBecomeAMember, data);
+}
+
+async function approveMembership(memberId)
+{
+    return await api.update(endPoints.approveMembership + memberId, { status: "member" });
+}
+
+async function removeFromOrLeaveTeam(membershipRecordId)
+{
+    return await api.del(endPoints.removeFromOrLeaveTeam + membershipRecordId);
 }
 
 export const dataService =
@@ -33,5 +51,8 @@ export const dataService =
     getAllTeams,
     getAllMembers,
     getTeamById,
-    getTeamMembers
+    getTeamMembers,
+    requestToBecomeAMember,
+    approveMembership,
+    removeFromOrLeaveTeam
 }

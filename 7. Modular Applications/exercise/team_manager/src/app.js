@@ -7,7 +7,7 @@ import { showMyTeamsView } from "./views/myTeamsView.js";
 import { showRegisterView } from "./views/registerView.js";
 import { showCreateView } from "./views/createView.js";
 import { showEditView } from "./views/editView.js";
-import { showTeamDetailsView } from "./views/teamDetailsView.js";
+import { approveMembership, joinTeam, removeFromOrLeaveTeam, showTeamDetailsView } from "./views/teamDetailsView.js";
 import { decorateContext } from "./utility/decorateContext.js";
 import { updateNav } from "./utility/navigationControl.js";
 
@@ -21,6 +21,12 @@ page("/logout", logout);
 page("/create", showCreateView);
 page("/edit/:id", showEditView);
 page("/details/:id", showTeamDetailsView);
+page("/joinTeam/:id", joinTeam);
+page("/approve/:teamId/:membershipRecordId", approveMembership);
+page("/decline/:teamId/:membershipRecordId", removeFromOrLeaveTeam);
+page("/remove/:teamId/:membershipRecordId", removeFromOrLeaveTeam);
+page("/leave/:teamId/:membershipRecordId", removeFromOrLeaveTeam);
+page("/cancel/:teamId/:membershipRecordId", removeFromOrLeaveTeam);
 
 page.start();
 updateNav();

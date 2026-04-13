@@ -34,11 +34,26 @@ async function onSubmit(data)
 {
     const { email, username, password, repass } = data;
 
-    if(!email || password.length < 3 || password !== repass || !username)
+    if(!email || !username || !password || !repass) 
     {
         return renderer(registerTemplate(createSubmitHandler(onSubmit), { message: "All fields are required!" }));
     }
-    
+
+    if(username.length < 3) 
+    {
+        return renderer(registerTemplate(createSubmitHandler(onSubmit), { message: "Username must be at least 3 symbols!" }));
+    }
+
+    if(password.length < 3) 
+    {
+        return renderer(registerTemplate(createSubmitHandler(onSubmit), { message: "Password must be at least 3 symbols!" }));
+    }
+
+    if(password !== repass) 
+    {
+        return renderer(registerTemplate(createSubmitHandler(onSubmit), { message: "Passwords don't match!" }));
+    }
+
     await userService.register({ email, password, username });
 
     context.goTo("/myTeams");

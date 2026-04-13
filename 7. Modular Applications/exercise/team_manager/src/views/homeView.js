@@ -1,6 +1,7 @@
-import { html, renderer } from "../utility/library.js";
+import { html, nothing, renderer } from "../utility/library.js";
+import { userUtils } from "../utility/userUtil.js";
 
-const homeTemplate = () => html`
+const homeTemplate = (hasUser) => html`
     <section id="home">
         <article class="hero layout">
             <img src="./assets/team.png" class="left-col pad-med">
@@ -8,15 +9,17 @@ const homeTemplate = () => html`
                 <h2>Welcome to Team Manager!</h2>
                 <p>Want to organize your peers? Create and manage a team for free.</p>
                 <p>Looking for a team to join? Browse our communities and find like-minded people!</p>
-                <a href="/register" class="action cta">Sign Up Now</a>
-                <a href="/browseTeam" class="action cta">Browse Teams</a>
+                ${!hasUser ? html` 
+                    <a href="/register" class="action cta">Sign Up Now</a>` : nothing}
+                    <a href="/browseTeam" class="action cta">Browse Teams</a>
             </div>
         </article>
     </section>
 `;
 
-export function showHomeView(ctx)
+export async function showHomeView(ctx)
 {
-    renderer(homeTemplate());
+    const hasUser = userUtils.getUserId();
+    renderer(homeTemplate(hasUser));
 }
 
