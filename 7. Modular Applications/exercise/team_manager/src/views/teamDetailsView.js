@@ -23,7 +23,7 @@ const teamDetailsTemplate = (teamData, members, requests, state, membershipRecor
 
 const teamActionTemplate = (state, teamId, membershipRecordId) => html`
     <div>
-        ${state.isOwner ? html` <a href="#" class="action">Edit team</a>` : nothing}
+        ${state.isOwner ? html` <a href="/edit/${teamId}" class="action">Edit team</a>` : nothing}
         ${state.isNotMember && !state.isGuest ? html` <a href="/joinTeam/${teamId}" class="action">Join team</a>` : nothing}
         ${state.isMember && !state.isOwner ? html` <a href="/leave/${teamId}/${membershipRecordId}" class="action invert">Leave team</a>`: nothing}
         ${state.isPending ? html` Membership pending. <a href="/cancel/${teamId}/${membershipRecordId}">Cancel request</a>`: nothing}
@@ -78,7 +78,6 @@ export async function showTeamDetailsView(ctx)
 
     const members = teamMembers.filter(m => m.status === "member");
     const requests = teamMembers.filter(m => m.status === "pending");
-    debugger;
 
     const userId = userUtils.getUserId();
 
