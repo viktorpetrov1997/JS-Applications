@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
+nav {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+nav a {
+    color: #667eea;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    font-size: 1.1em;
+    padding: 10px 25px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+nav a:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    color: #2d3748;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+p {
+    color: #4a5568;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.book-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.book-list li {
+    background: linear-gradient(135deg, #f6f8fb 0%, #ffffff 100%);
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    border-left: 5px solid #667eea;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.book-list li:hover {
+    transform: translateX(10px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+    border-left-color: #764ba2;
+}
+
+.book-title {
+    font-size: 1.3em;
+    color: #2d3748;
+    font-weight: 600;
+    flex: 1;
+    min-width: 200px;
+}
+
+.book-author {
+    color: #718096;
+    font-size: 0.95em;
+    margin-left: 10px;
+}
+
+.book-link, .btn, .back-link {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.book-link:hover, .btn:hover, .back-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.book-link:active, .btn:active, .back-link:active {
+    transform: translateY(-1px);
+}
+
+.book-details {
+    background: linear-gradient(135deg, #f6f8fb 0%, #ffffff 100%);
+    padding: 30px;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.book-details p {
+    margin: 15px 0;
+    font-size: 1.15em;
+}
+
+.book-details strong {
+    color: #667eea;
+    font-weight: 600;
+}
+
+.welcome-section {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.welcome-section h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    font-size: 1.3em;
+    color: #718096;
+}
+
+/* Форма за добавяне на книга */
+.book-form {
+    margin-top: 30px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    flex: 1;
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #718096 0%, #4a5568 100%);
+    flex: 1;
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, #4a5568 0%, #718096 100%);
+}
+
+/* Съобщение за успех */
+.success-message {
+    text-align: center;
+    padding: 40px;
+    animation: fadeIn 0.5s ease;
+}
+
+.success-message h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.success-message p {
+    font-size: 1.3em;
+    color: #48bb78;
+    font-weight: 600;
+}
