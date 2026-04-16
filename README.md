@@ -1,4 +1,6 @@
-![image](https://github.com/viktorpetrov1997/JS-Advanced/assets/126717931/b098ecc3-b258-4ecc-a573-9edd0e30164b)
+<p align="center">
+  <img src="https://github.com/viktorpetrov1997/JS-Advanced/assets/126717931/b098ecc3-b258-4ecc-a573-9edd0e30164b" />
+</p>
 
 # JS Applications
 
@@ -33,7 +35,7 @@ In addition, 30% of the exercise tasks will be solved with the help of **AI**, w
 - Testing applications
 
 ## Certificate :heavy_check_mark:
-<img width="700" alt="JS Applications - Certificate" src="https://github.com/user-attachments/assets/13ba3f4d-b99e-4296-8dce-1beed261bd55" />
+<img width="600" alt="JS Applications - Certificate" src="https://github.com/user-attachments/assets/13ba3f4d-b99e-4296-8dce-1beed261bd55" />
 
 ---
 
