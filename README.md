@@ -33,8 +33,8 @@ In addition, 30% of the exercise tasks will be solved with the help of **AI**, w
 - Testing applications
 
 ## Certificate :heavy_check_mark:
-<img width="600" alt="JS Applications - Certificate" src="https://github.com/user-attachments/assets/13ba3f4d-b99e-4296-8dce-1beed261bd55" />
+<img width="700" alt="JS Applications - Certificate" src="https://github.com/user-attachments/assets/13ba3f4d-b99e-4296-8dce-1beed261bd55" />
 
 ---
 
-👉 **[Open Certificate](https://softuni.bg/certificates/details/259799/ecde62f5)**
+👉 **[View Certificate](https://softuni.bg/certificates/details/259799/ecde62f5)**
